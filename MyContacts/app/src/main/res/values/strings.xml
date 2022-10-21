@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">MyContacts</string>
+    <string name="user_id_label">userid:</string>
+    <string name="name_label">name:</string>
 </resources>
