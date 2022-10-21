@@ -9,8 +9,9 @@ import com.example.mycontacts.model.User
 import com.example.mycontacts.network.NetworkState
 import com.example.mycontacts.repository.UserRepository
 import kotlinx.coroutines.*
+import javax.inject.Inject
 
-class UserViewModel constructor(private val repository: UserRepository) : BaseViewModel() {
+class UserViewModel @Inject constructor(private val repository: UserRepository) : BaseViewModel() {
 
     private val _errorMessage = MutableLiveData<String>()
     val errorMessage: LiveData<String>

@@ -3,8 +3,9 @@ package com.example.mycontacts.repository
 import com.example.mycontacts.model.User
 import com.example.mycontacts.network.ApiService
 import com.example.mycontacts.network.NetworkState
+import javax.inject.Inject
 
-class UserRepository constructor(private val service: ApiService) {
+class UserRepository @Inject constructor(private val service: ApiService) {
 
     suspend fun getUsers() : NetworkState<List<User>> {
         val response = service.getUsers()
